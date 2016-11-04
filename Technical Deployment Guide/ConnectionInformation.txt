@@ -1,0 +1,19 @@
+Azure Storage Account:
+Storage Account Name: 
+Key1: 
+
+Event Hub:
+Event Hub Name: 
+Namespace: 
+Connection String:
+
+Azure Machine Learning RRS Details:
+API Key: 
+Request URI:
+
+Azure SQL Data Warehouse:
+Server Name:
+Database: 
+User Name: 
+Password: 
+

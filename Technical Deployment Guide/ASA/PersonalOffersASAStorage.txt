@@ -1,0 +1,37 @@
+SELECT
+    user_id,
+    CONCAT(CAST(product_id AS NVARCHAR(MAX)), 'm') as product_period,
+    count(*) as count,
+    MAX(sampletime) as time
+INTO OutputMinuteTablestore
+FROM
+    inputeh TIMESTAMP BY sampletime
+Group By user_id, product_id, SlidingWindow(minute, 1)
+
+SELECT
+    user_id,
+    CONCAT(CAST(product_id AS NVARCHAR(MAX)), 'h') as product_period,
+    count(*) as count,
+    MAX(sampletime) as time
+INTO OutputHourTablestore
+FROM
+    inputeh TIMESTAMP BY sampletime
+Group By user_id, product_id, SlidingWindow(minute, 60)
+
+SELECT
+    user_id,
+    CONCAT(CAST(product_id AS NVARCHAR(MAX)), 'd') as product_period,
+    count(*) as count,
+    MAX(sampletime) as time
+INTO OutputDayTablestore
+FROM
+    inputeh TIMESTAMP BY sampletime
+Group By user_id, product_id, SlidingWindow(minute, 1440)
+
+SELECT
+	user_id, state, product_id, product_name, product_category, product_price,
+    ad_id1, ad_id2, ad_id3, ad_name, ad_category, ad_price, ref_id, click, sampletime
+INTO
+	OutputBlobStore
+FROM
+	inputeh TIMESTAMP BY sampletime

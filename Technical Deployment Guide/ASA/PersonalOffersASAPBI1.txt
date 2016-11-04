@@ -1,0 +1,11 @@
+SELECT
+	System.TimeStamp AS OutTime
+	, product_category
+	, COUNT(*)
+INTO
+	OutputPBI
+FROM
+	inputeh TIMESTAMP BY [sampletime]
+GROUP BY 
+	product_category
+	, TumblingWindow(minute,1)

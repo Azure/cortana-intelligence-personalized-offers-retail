@@ -1,0 +1,10 @@
+{
+    "name": "storageLS",
+    "properties": {
+        "description": "Azure Storage for Blob, Table, and Queue storage",
+        "type": "AzureStorage",
+        "typeProperties": {
+            "connectionString": "DefaultEndpointsProtocol=https;AccountName=<Storage Account Name>;AccountKey=<Storage Account Key>"
+        }
+    }
+}

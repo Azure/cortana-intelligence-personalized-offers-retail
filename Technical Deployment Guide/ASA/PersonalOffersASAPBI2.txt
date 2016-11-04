@@ -1,0 +1,12 @@
+SELECT 
+	user_id
+	, product_name as 'Product Viewed'
+	, ad_name as 'Ad Shown'
+	, ad_name as 'Ad Clicked'
+	, click
+	, sampletime as 'OutTime'
+	, EventEnqueuedUtcTime
+INTO
+	OutputPBI
+FROM
+	inputeh TIMESTAMP BY [EventEnqueuedUtcTime]

@@ -1,0 +1,10 @@
+{
+    "name": "personaloffersSQLDWLS",
+    "properties": {
+        "description": "Azure SQL Data Warehouse for long term storage of bulk click data",
+        "type": "AzureSqlDW",
+        "typeProperties": {
+			"connectionString": "Data Source=tcp:<servername>.database.windows.net,1433;Initial Catalog=<databasename>;User ID=<username>@<servername>;Password=<password>;Integrated Security=False;Encrypt=True;Connect Timeout=30;TrustServerCertificate=False"
+        }
+    }
+}

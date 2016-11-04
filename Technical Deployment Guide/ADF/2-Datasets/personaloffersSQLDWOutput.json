@@ -1,0 +1,15 @@
+{
+    "name": "personaloffersSQLDWOutput",
+    "properties": {
+        "published": false,
+        "type": "AzureSqlDWTable",
+        "linkedServiceName": "personaloffersSQLDWLS",
+        "typeProperties": {
+            "tableName": "rawdata"
+        },
+        "availability": {
+            "frequency": "Hour",
+            "interval": 1
+        }
+    }
+}

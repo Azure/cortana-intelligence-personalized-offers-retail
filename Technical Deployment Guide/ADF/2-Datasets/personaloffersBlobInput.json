@@ -1,0 +1,128 @@
+{
+    "name": "personaloffersBlobInput",
+    "properties": {
+        "structure": [
+            {
+                "name": "user_id",
+                "type": "String"
+            },
+            {
+                "name": "state",
+                "type": "String"
+            },
+            {
+                "name": "product_id",
+                "type": "Int32"
+            },
+            {
+                "name": "product_name",
+                "type": "String"
+            },
+            {
+                "name": "product_category",
+                "type": "String"
+            },
+            {
+                "name": "product_price",
+                "type": "Double"
+            },
+            {
+                "name": "ad_id1",
+                "type": "Int32"
+            },
+            {
+                "name": "ad_id2",
+                "type": "Int32"
+            },
+            {
+                "name": "ad_id3",
+                "type": "Int32"
+            },
+            {
+                "name": "ad_name",
+                "type": "String"
+            },
+            {
+                "name": "ad_category",
+                "type": "String"
+            },
+            {
+                "name": "ad_price",
+                "type": "Double"
+            },
+            {
+                "name": "ref_id",
+                "type": "Int32"
+            },
+            {
+                "name": "click",
+                "type": "Int32"
+            },
+            {
+                "name": "sample",
+                "type": "Datetime"
+            },
+            {
+                "name": "EventProcessedUtcTime",
+                "type": "Datetime"
+            },
+            {
+                "name": "PartitionId",
+                "type": "Int32"
+            },
+            {
+                "name": "EventEnqueuedUtcTime",
+                "type": "Datetime"
+            }
+        ],
+        "published": false,
+        "type": "AzureBlob",
+        "linkedServiceName": "storageLS",
+        "typeProperties": {
+            "folderPath": "rawdata/{Year}/{Month}/{Day}/{Hour}",
+            "format": {
+                "type": "TextFormat"
+            },
+            "partitionedBy": [
+                {
+                    "name": "Year",
+                    "value": {
+                        "type": "DateTime",
+                        "date": "SliceStart",
+                        "format": "yyyy"
+                    }
+                },
+                {
+                    "name": "Month",
+                    "value": {
+                        "type": "DateTime",
+                        "date": "SliceStart",
+                        "format": "MM"
+                    }
+                },
+                {
+                    "name": "Day",
+                    "value": {
+                        "type": "DateTime",
+                        "date": "SliceStart",
+                        "format": "dd"
+                    }
+                },
+                {
+                    "name": "Hour",
+                    "value": {
+                        "type": "DateTime",
+                        "date": "SliceStart",
+                        "format": "HH"
+                    }
+                }
+            ]
+        },
+        "availability": {
+            "frequency": "Hour",
+            "interval": 1
+        },
+        "external": true,
+        "policy": {}
+    }
+}
