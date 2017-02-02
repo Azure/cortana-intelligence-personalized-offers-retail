@@ -1,0 +1,6 @@
+{
+  "EventHubName": "",
+  "EventHubConnectionString": "Endpoint=sb://<namespace>.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=<key value>",
+  "AMLEndpointURL": "<AML URL>",
+  "AMLEndpointKey": "<AML KEY>"
+}
