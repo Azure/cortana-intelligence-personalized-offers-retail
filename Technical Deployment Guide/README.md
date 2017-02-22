@@ -596,7 +596,7 @@ as well analysis of the web data over a longer period of time. (cold path).
 	-	Click the *rawdata* table and then the *OK* button.
 	-	Click *Close and Apply*.
 	-	On the application ribbon menu click *Publish*, you will be prompted for your credentials.
-	-	Navigate to ***msit.powerbi.com*** site, open the menu on the top left corner of the screen, navigate to Dashboards to see the dashboard that has been published. 
+	-	Navigate to the ***[powerbi.microsoft.com](https://powerbi.microsoft.com)*** site, log in, open the menu on the top left corner of the screen, navigate to Dashboards to see the dashboard that has been published. 
 
 Users will need to customize the visualizations and analysis here to fit their specific business requirements. 
 
