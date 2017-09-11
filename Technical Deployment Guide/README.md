@@ -247,7 +247,7 @@ Now we will walk through setting up the queries and outputs for the three jobs.
 - 	In the query box, copy the contents of the ***PersonalOffersASAStorage.txt*** located in under the ./ASA/ file path in the package.
 - 	Click ***Save***
 
-####Configure the output
+#### Configure the output
 There are four outputs from the personaloffersasastorage job. One to blob and three to table storage to handle minute, hour, and daily aggregate data. We will
 walk through the configuration of all of these below:
 - 	Return to the main frame for the personaloffersasastorage job
@@ -297,7 +297,7 @@ Now that this job has been configured, we can start the job to begin streaming d
 - 	In the query box, copy the contents of the ***PersonalOffersASAPBI1.txt*** located in under the ./ASA/ file path in the package.
 - 	Click ***Save***
 
-####Configure the output
+#### Configure the output
 The output of this job goes directly into Power BI. The following steps walkthrough the process
 for setting up this functionality.
 
@@ -323,7 +323,7 @@ Now that this job has been configured, we can start the job to begin streaming d
 
 ### personaloffersasapbi2 Query and Output
 
-####Configure the query:
+#### Configure the query:
 - 	Navigate to ***portal.azure.com*** and login in to your account.
 -	On the left tab click ***Resource Groups***
 -	Click on the resource group we created earlier ***personaloffers_resourcegroup*** 
@@ -332,7 +332,7 @@ Now that this job has been configured, we can start the job to begin streaming d
 - 	In the query box, copy the contents of the ***PersonalOffersASAPBI2.txt*** located in under the ./ASA/ file path in the package.
 - 	Click ***Save***
 
-####Configure the output
+#### Configure the output
 The output of this job goes directly into Power BI. The following steps walkthrough the process
 for setting up this functionality.
 > NOTE: Stream analytics to Power BI functionality is configured on the ***manage.windowsazure.com*** portal
